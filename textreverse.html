@@ -2,17 +2,21 @@
 <html>
 <body>
 
+<style type="text/css">
+  textarea {width: 100%;}
+</style>
+
 <form>
-  <textarea id="textData" cols="48" name="Entrada" rows="7"></textarea>
-  <input type="button" value="Escrever ao Contrario" onclick="textReverse()"/> <input type="reset" value="Apagar" />
-  <textarea cols="48" name="newTextData" rows="7"></textarea>
+  <textarea id="textData" rows="7"></textarea>
+  <input type="button" value="Inverter texto" onclick="reverseText()"/> <input type="reset" value="Apagar" />
+  <textarea id="newTextData" rows="7"></textarea>
 </form>
 
 <script type="text/javascript" language="JavaScript">
-function textReverse() {
-  document.all.newTextData.value="";
-  for(count=document.all.textData.value.length;count>=0; count--)
-  document.all.newTextData.value += document.all.textData.value.substring(count,count-1);
+function reverseText() {
+    document.all.newTextData.value="";
+    for(count=document.all.textData.value.length;count>=0; count--)
+    document.all.newTextData.value += document.all.textData.value.substring(count,count-1);
 }
 </script>
 
